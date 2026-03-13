@@ -23,7 +23,7 @@ jobs:
       - name: Detect client from branch
         id: client
         run: |
-          CLIENT=${GITHUB_HEAD_REF}
+          CLIENT=${GITHUB_BASE_REF}
           echo "CLIENT=$CLIENT" >> $GITHUB_ENV
           echo "Detected CLIENT=$CLIENT"
 

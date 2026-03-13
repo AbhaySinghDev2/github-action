@@ -1,0 +1,23 @@
+{
+  "KMJL": {
+    "REACT_APP_SEA_URL": "https://kmjl.seaerpnxt.app/api/SEAapi/",
+    "REACT_APP_FOLDERNAME": "KMJL",
+    "REACT_APP_CLIENT_NAME": "KMJL",
+    "REACT_APP_CLIENT_CODE": "KMJL",
+    "REACT_APP_API_SOCKET_URL": "KMJL"
+  },
+  "CANDERE": {
+    "REACT_APP_SEA_URL": "https://candere.seaerpnxt.app/api/SEAapi/",
+    "REACT_APP_FOLDERNAME": "CANDERE",
+    "REACT_APP_CLIENT_NAME": "CANDERE",
+    "REACT_APP_CLIENT_CODE": "CANDERE",
+    "REACT_APP_API_SOCKET_URL": "CANDERE"
+  },
+  "DNETTMPL": {
+    "REACT_APP_SEA_URL": "https://dnettmpl.seaerpnxt.app/api/SEAapi/",
+    "REACT_APP_FOLDERNAME": "DNETTMPL",
+    "REACT_APP_CLIENT_NAME": "DNETTMPL",
+    "REACT_APP_CLIENT_CODE": "DNETTMPL",
+    "REACT_APP_API_SOCKET_URL": "DNETTMPL"
+  }
+}

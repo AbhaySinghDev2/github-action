@@ -1,0 +1,12 @@
+name:  Test Action
+
+on:
+  pull_request:
+    branches-ignore: [main] # PR on every baranch except main
+
+jobs:
+  log-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Log
+      run: echo "TEST GITHUB ACTION EXECUTED" 

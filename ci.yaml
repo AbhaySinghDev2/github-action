@@ -1,0 +1,31 @@
+name: CI - Build & Validate
+
+on:
+  pull_request:
+    branches: [kmjl]           # only PRs going into kmjl
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci                # or npm install
+
+      - name: Build for client
+        env:
+          CLIENT: kmjl             # or detect from branch if needed
+        run: npm run build:client  # this should fail if code has errors
+
+      # Add more if you have:
+      # - name: Run tests
+      #   run: npm test
+      # - name: Lint
+      #   run: npm run lint

@@ -2,6 +2,7 @@ import './App.css';
 
 function App() {
 
+  console.log(process.env)
   return (
     <>
     <h2>hello</h2>
@@ -11,7 +12,6 @@ function App() {
       <li>CANDERE</li>
     </ul>
     </>
-
   );
 }
 

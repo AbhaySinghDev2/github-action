@@ -5,8 +5,28 @@ on:
     branches-ignore: [main] # PR on every baranch except main
 
 jobs:
-  log-job:
+  build-log-job:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Print Log
-      run: echo "TEST GITHUB ACTION EXECUTED" 
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Detect client from branch
+        id: client
+        run: |
+          CLIENT=${GITHUB_HEAD_REF}
+          echo "CLIENT=$CLIENT" >> $GITHUB_ENV
+          echo "Detected CLIENT=$CLIENT"
+
+      - name: Print Log
+        run: echo "TEST GITHUB ACTION EXECUTED"
+    

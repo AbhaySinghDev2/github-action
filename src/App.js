@@ -8,6 +8,7 @@ function App() {
     <ul>
       <li>KMJL</li>
       <li>PML</li>
+      <li>CANDERE</li>
     </ul>
     </>
 
